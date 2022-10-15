@@ -14,9 +14,9 @@ window.onload = function() {
   let adj = ["great", "big"];
   let noun = ["jogger", "racoon"];
   let domain = [".us", ".com"];
-  let finalArray = [];
 
   function genDomain() {
+    let finalArray = [];
     for (let p in pronoun) {
       for (let a in adj) {
         for (let n in noun) {
