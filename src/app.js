@@ -7,5 +7,28 @@ import "./assets/img/4geeks.ico";
 
 window.onload = function() {
   //write your code here
-  console.log("Hello Rigo from the console!");
+  // console.log("yo");
+  // console.log("hi");
+
+  let pronoun = ["the", "our"];
+  let adj = ["great", "big"];
+  let noun = ["jogger", "racoon"];
+  let domain = [".us", ".com"];
+  let finalArray = [];
+
+  function genDomain() {
+    for (let p in pronoun) {
+      for (let a in adj) {
+        for (let n in noun) {
+          for (let d in domain) {
+            finalArray.push(pronoun[p] + adj[a] + noun[n] + domain[d]);
+          }
+        }
+      }
+    }
+    return finalArray;
+  } // end of gendomain
+
+  //document.getElementById("domain").innerHTML = genDomain();
+  document.querySelector("#domain").innerHTML = genDomain().join("\n");
 };
